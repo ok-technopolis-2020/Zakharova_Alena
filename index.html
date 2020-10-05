@@ -3,38 +3,45 @@
 <head>
 	<meta charset="utf-8">
 	<title>todo</title>
+	<style>
+		li {
+			list-style-type: none;
+		}
+	</style>
 </head>
 <body>
 	<header>
 		<h1>todos</h1>
 	</header>
 	
-	<div>
+	<form>
 		<div>
-			<input type="image" src="icons/select-all.png">
+			<input type="button" value="v">
 			<input type="text" placeholder="What needs to be done?">
 		</div>
 
-		<div>
-			<input type="checkbox">
-			<label contenteditable="true">HTML</label>
-			<input type="image" src="icons/close.png">
-		</div>
-		<div>
-			<input type="checkbox">
-			<label contenteditable="true">CSS</label>
-			<input type="image" src="icons/close.png">
-		</div>
-		<div>
-			<input type="checkbox">
-			<label contenteditable="true">JS</label>
-			<input type="image" src="icons/close.png">
-		</div>
-		<div>
-			<input type="checkbox">
-			<label contenteditable="true">JS tools</label>
-			<input type="image" src="icons/close.png">
-		</div>
+		<ul>
+			<li>
+				<input type="checkbox">
+				<label contenteditable="true">HTML</label>
+				<input type="button" value="x">
+			</li>
+			<li>
+				<input type="checkbox" checked="checked">
+				<label contenteditable="true">CSS</label>
+				<input type="button" value="x">
+			</li>
+			<li>
+				<input type="checkbox">
+				<label contenteditable="true">JS</label>
+				<input type="button" value="x">
+			</li>
+			<li>
+				<input type="checkbox">
+				<label contenteditable="true">JS tools</label>
+				<input type="button" value="x">
+			</li>
+		</ul>
 
 		<div>
 			<label>3 items left</label>
@@ -50,7 +57,7 @@
 
 			<input type="button" value="Clear completed">
 		</div>
-	</div>
+	</form>
 
 </body>
 </html>
