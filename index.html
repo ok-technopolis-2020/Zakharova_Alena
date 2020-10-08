@@ -3,18 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>todo</title>
-	<style>
-		li {
-			list-style-type: none;
-		}
-	</style>
 </head>
 <body>
 	<header>
 		<h1>todos</h1>
 	</header>
 	
-	<form>
+	<div>
 		<div>
 			<input type="button" value="v">
 			<input type="text" placeholder="What needs to be done?">
@@ -36,11 +31,13 @@
 				<label contenteditable="true">JS</label>
 				<input type="button" value="x">
 			</li>
-			<li>
-				<input type="checkbox">
-				<label contenteditable="true">JS tools</label>
-				<input type="button" value="x">
-			</li>
+			<div>
+				<li>
+					<input type="checkbox">
+					<label contenteditable="true">JS tools</label>
+					<input type="button" value="x">
+				</li>
+			</div>
 		</ul>
 
 		<div>
@@ -57,7 +54,7 @@
 
 			<input type="button" value="Clear completed">
 		</div>
-	</form>
+	</div>
 
 </body>
 </html>
