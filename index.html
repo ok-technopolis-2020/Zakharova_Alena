@@ -10,51 +10,57 @@
 	</header>
 	
 	<div>
-		<div>
-			<input type="button" aria-label="select all">
-			<input type="text" placeholder="What needs to be done?">
-		</div>
-
-		<ul>
-			<li>
-				<input type="checkbox">
-				<label contenteditable="true">HTML</label>
-				<input type="button" aria-label="remove task">
-			</li>
-
-			<li>
-				<input type="checkbox" checked="checked">
-				<label contenteditable="true">CSS</label>
-				<input type="button" aria-label="remove task">
-			</li>
-			<li>
-				<input type="checkbox">
-				<label contenteditable="true">JS</label>
-				<input type="button" aria-label="remove task">
-			</li>
-			<div>
+		<header>
+			<button aria-label="select all"></button>
+			<input type="text" aria-label="add new task" placeholder="What needs to be done?" autofocus="true">
+		</header>
+		
+		<main>
+			<ul>
 				<li>
 					<input type="checkbox">
-					<label contenteditable="true">JS tools</label>
-					<input type="button" aria-label="remove task">
+					<span>HTML</span>
+					<button aria-label="remove task"></button>
 				</li>
+
+				<li>
+					<input type="checkbox" checked="checked">
+					<span>CSS</span>
+					<button aria-label="remove task"></button>
+				</li>
+				<li>
+					<input type="checkbox">
+					<span>JS</span>
+					<button aria-label="remove task"></button>
+				</li>
+				<li>
+					<input type="checkbox">
+					<span>JS tools</span>
+					<button aria-label="remove task"></button>
+				</li>
+			</ul>
+		</main>
+
+		<footer>
+			<div>
+				<span>3 items left</span>
 			</div>
-		</ul>
 
-		<div>
-			<label>3 items left</label>
+			<div>
+				<input type="radio" name="tab" id="all" checked="checked" aria-label="all tasks">
+				<label for="all">All</label>
 
-			<input type="radio" name="tab" id="all" checked="checked">
-			<label for="all">All</label>
+				<input type="radio" name="tab" id="active" aria-label="active tasks">
+				<label for="active">Active</label>
 
-			<input type="radio" name="tab" id="active">
-			<label for="active">Active</label>
+				<input type="radio" name="tab" id="completed" aria-label="completed tasks">
+				<label for="completed">Completed</label>
+			</div>
 
-			<input type="radio" name="tab" id="completed">
-			<label for="completed">Completed</label>
-
-			<input type="button" value="Clear completed">
-		</div>
+			<div>
+				<button>Clear completed</button>
+			</div>
+		</footer>
 	</div>
 
 </body>
