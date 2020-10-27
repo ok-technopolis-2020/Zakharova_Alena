@@ -47,7 +47,8 @@ h1 {
     height: 62px;
     display: flex;
     align-items: center;
-    border: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     position: sticky; 
     top: 0;
 }
@@ -119,7 +120,8 @@ span {
     text-align: left;
     color: var(--item-text-color);
     min-height: 62px;
-    border: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 
     display: flex;
     align-items: center;
@@ -196,7 +198,8 @@ footer {
   	align-items: center;
 
     color: var(--footer-text-color);
-    border: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color)
 }
 
 .task-counter {
