@@ -1,8 +1,9 @@
 /*в процессе
 еще надо:
-починить кнопочки
-разобраться с бордером
-доступность элементов при управлении с клавиатурой
+доступность radio с клавиатуры
+разбить css на файлики
+назвать нормально классы
+чекбоксы
 что-то еще*/
 
 :root {
@@ -39,7 +40,6 @@ h1 {
     background-color: var(--main-container-background-color);
     width: 562px;
     min-height: 402px;
-    /*замечание про фиксированные размеры помню, просто пока не знаю, как это решить*/
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     border-spacing: 0;
 }
@@ -48,8 +48,9 @@ h1 {
     height: 62px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
+    border: 1px solid var(--border-color);
+    position: sticky; 
+    /*сломала))))))*/
     top: 0;
 }
 
@@ -60,22 +61,22 @@ h1 {
     background-color: var(--button-background-color);
 	width: 62px;
     height: 100%;
-    border: none;
+    border: 1px solid transparent;;
 }
 
 
-/*а чтобы проверить, что оно работает, надо купить мак..?*/
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
     .toggle-btn {
     	background: url(../icons/select-all@2x.png) no-repeat;
     	background-size: 28px 16px;
-    	width: 28px;
+    	background-color: var(--button-background-color);
+/*    	width: 28px;
 		height: 16px;
 	    border: none;
 	    margin-left: 17px;
-		margin-right: 17px;
+		margin-right: 17px;*/
     }
 }
 
@@ -89,19 +90,15 @@ input[type="text"] {
     font-weight: 300;
     font-size: 24px;
     border: none;
-    border-bottom: 1px solid var(--border-color);
     width: 100%;
-    height: 100%;
+	height: 60px;
 }
+
 
 ::placeholder {
     color: var(--placeholder-color);
 }
 
-
-main {
-	/*height: 74%;*/
-}
 
 ul {
     margin: 0 0 0 0;
@@ -111,7 +108,6 @@ ul {
 }
 
 li {
-	/*height: 20%;*/
 	min-height: 62px;
 }
 
@@ -125,9 +121,7 @@ span {
     text-align: left;
     color: var(--item-text-color);
     min-height: 62px;
-    box-shadow: inset 0px -1px 0px #E6E6E6;
-    /*border: 1px solid #E6E6E6;
-    /*с бордером что-то пошло не так...(((*/
+    border: 1px solid var(--border-color);
 
     display: flex;
     align-items: center;
@@ -136,10 +130,12 @@ span {
 }
 
 
-
-/*над красивыми чекбоксами пока думаю*/
 input[type="checkbox"] {
     margin: 11px 11px;
+}
+
+.remove-btn:focus {
+	visibility: visible;
 }
 
 .custom-checkbox:checked + span {
@@ -156,9 +152,10 @@ input[type="checkbox"] {
     background-size: 20px 20px;
 	width: 62px;
     height: 62px;
-    background-position: center
+    background-position: center;
 	border: none;
-    visibility: hidden;
+    position: relative;
+    left: -10000px;
 }
 
 @media 
@@ -167,11 +164,11 @@ input[type="checkbox"] {
     .remove-btn {
     	background: url(../icons/close@2x.png) no-repeat;
     	background-size: 20px 20px;
-    	width: 20px;
+/*    	width: 20px;
 		height: 20px;
 		border: none;
 	    margin-right: 11px;
-	    visibility: hidden;
+	    visibility: hidden;*/
     }
 }
 
@@ -184,7 +181,7 @@ li:hover {
 }
 
 li:hover .remove-btn {
-	visibility: visible;
+	left: 0;
 }
 
 footer {
@@ -209,11 +206,16 @@ footer {
 }
 
 .tabs-block {
-	width: 35%;
     display: flex;
   	justify-content: space-between;
 }
 
+.radio-btn + .radio-btn {
+	margin-left: 17px;
+}
+
+/*не очень понятно, как скрыть эти кружочки у radio button,
+но при этом оставить вохможность попасть в нее с клавиатуры*/
 .radio-btn input[type="radio"] {
 	display: none;
 }
@@ -222,6 +224,7 @@ footer {
 	padding: 2px 5px;
 	border: 1px solid transparent;
 }
+
 
 .radio-btn input[type="radio"]:checked + label {
 	border: 1px solid var(--selected-tab-border-color);
