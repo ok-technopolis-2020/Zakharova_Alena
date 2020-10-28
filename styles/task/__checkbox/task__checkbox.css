@@ -1,0 +1,9 @@
+.task__checkbox {
+    margin: 11px 11px;
+    display: none;
+}
+
+.task__checkbox:checked ~ .task__text {
+	color: var(--checked-item-text-color);
+	text-decoration: line-through;
+}

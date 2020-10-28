@@ -1,0 +1,8 @@
+.task__text {
+	overflow-wrap: break-word;
+	width: 100%;
+}
+
+.task__checkbox:checked ~ .task__text {
+	text-decoration: line-through;
+}

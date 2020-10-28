@@ -1,10 +1,7 @@
 /*в процессе
 еще надо:
 доступность radio с клавиатуры
-разбить css на файлики
-назвать нормально классы
-чекбоксы
-что-то еще*/
+разбить css на файлики*/
 
 :root {
 	--border-color: #E6E6E6;
@@ -17,6 +14,8 @@
 	--hovered-item-color: #FAFAFA;
 	--button-background-color: #FFFFFF;
 	--footer-text-color: #888888;
+	--checked-item-border-color: #5DC2AF;
+	--checked-item-text-color: #CCCCCC;
 }
 
 body {
@@ -43,7 +42,7 @@ h1 {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.new-task {
+.header {
     height: 62px;
     display: flex;
     align-items: center;
@@ -53,68 +52,23 @@ h1 {
     top: 0;
 }
 
-.toggle-btn {
-    background: url(../icons/select-all.png) no-repeat;
-    background-size: 28px 16px;
-    background-position: center;
-    background-color: var(--button-background-color);
-	width: 62px;
-    height: 100%;
-    border: 1px solid transparent;;
-}
-
-
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
-    .toggle-btn {
-    	background: url(../icons/select-all@2x.png) no-repeat;
-    	background-size: 28px 16px;
-    	background-color: var(--button-background-color);
-/*    	width: 28px;
-		height: 16px;
-	    border: none;
-	    margin-left: 17px;
-		margin-right: 17px;*/
-    }
-}
-
-.toggle-btn:hover {
-	border: 1px dashed;
-}
-
-input[type="text"] {
-    font-family: Roboto, sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 24px;
-    border: none;
-    width: 100%;
-	height: 60px;
-}
-
-
 ::placeholder {
     color: var(--placeholder-color);
 }
 
 
-ul {
+.list {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     list-style-type: none;
     min-height: 296px;
 }
 
-li {
+.item {
 	min-height: 62px;
 }
 
-span {
-	overflow-wrap: break-word;
-}
-
-.task-item {
+.task {
     font-weight: 300;
     font-size: 24px;
     text-align: left;
@@ -129,62 +83,11 @@ span {
   	justify-content: space-between;
 }
 
-
-input[type="checkbox"] {
-    margin: 11px 11px;
-}
-
-.remove-btn:focus {
-	visibility: visible;
-}
-
-.custom-checkbox:checked + span {
-	color: var(--item-text-color);
-	text-decoration: line-through;
-}
-
-.task {
-    width: 100%
-}
-
-.remove-btn {
-    background: url(../icons/close.png) no-repeat;
-    background-size: 20px 20px;
-	width: 62px;
-    height: 62px;
-    background-position: center;
-	border: none;
-    position: relative;
-    left: -10000px;
-}
-
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
-    .remove-btn {
-    	background: url(../icons/close@2x.png) no-repeat;
-    	background-size: 20px 20px;
-/*    	width: 20px;
-		height: 20px;
-		border: none;
-	    margin-right: 11px;
-	    visibility: hidden;*/
-    }
-}
-
-.remove-btn:hover {
-	border: 1px dashed;
-}
-
-li:hover {
+.item:hover {
 	background-color: var(--hovered-item-color);
 }
 
-li:hover .remove-btn {
-	left: 0;
-}
-
-footer {
+.footer {
     height: 44px;
 
     font-family: Roboto, sans-serif;
@@ -206,28 +109,27 @@ footer {
     margin-left: 12px;
 }
 
-.tabs-block {
+.tabs {
     display: flex;
   	justify-content: space-between;
 }
 
-.radio-btn + .radio-btn {
+.tab + .tab {
 	margin-left: 17px;
 }
 
 /*не очень понятно, как скрыть эти кружочки у radio button,
 но при этом оставить возможность попасть в нее с клавиатуры*/
-.radio-btn input[type="radio"] {
+.tab__radio {
 	display: none;
 }
 
-.radio-btn label {
+.tab__name {
 	padding: 2px 5px;
 	border: 1px solid transparent;
 }
 
-
-.radio-btn input[type="radio"]:checked + label {
+.tab__radio:checked + .tab__name {
 	border: 1px solid var(--selected-tab-border-color);
     border-radius: 5px;
 }
