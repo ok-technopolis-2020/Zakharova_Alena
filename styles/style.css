@@ -18,21 +18,13 @@
 	--checked-item-text-color: #CCCCCC;
 }
 
-body {
+.todo-app {
     background-color: var(--body-background-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 	font-family: Roboto, sans-serif;
-}
-
-h1 {
-    font-size: 100px;
-    font-weight: 200;
-    color: var(--header-color);
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 .main-container {
@@ -55,7 +47,6 @@ h1 {
 ::placeholder {
     color: var(--placeholder-color);
 }
-
 
 .list {
     margin: 0 0 0 0;
@@ -112,26 +103,6 @@ h1 {
 .tabs {
     display: flex;
   	justify-content: space-between;
-}
-
-.tab + .tab {
-	margin-left: 17px;
-}
-
-/*не очень понятно, как скрыть эти кружочки у radio button,
-но при этом оставить возможность попасть в нее с клавиатуры*/
-.tab__radio {
-	display: none;
-}
-
-.tab__name {
-	padding: 2px 5px;
-	border: 1px solid transparent;
-}
-
-.tab__radio:checked + .tab__name {
-	border: 1px solid var(--selected-tab-border-color);
-    border-radius: 5px;
 }
 
 .clear-btn {

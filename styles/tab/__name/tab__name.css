@@ -1,0 +1,9 @@
+.tab__name {
+	padding: 2px 5px;
+	border: 1px solid transparent;
+}
+
+.tab__radio:checked + .tab__name {
+	border: 1px solid var(--selected-tab-border-color);
+    border-radius: 5px;
+}
