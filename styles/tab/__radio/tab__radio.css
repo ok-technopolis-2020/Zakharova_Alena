@@ -1,5 +1,8 @@
-/*не очень понятно, как скрыть эти кружочки у radio button,
-но при этом оставить возможность попасть в нее с клавиатуры*/
 .tab__radio {
-	display: none;
+	width: 0;
+	height: 0;
+}
+
+.tab__radio:focus {
+	border: 1px solid red;
 }
