@@ -60,7 +60,6 @@
     text-align: left;
     color: var(--item-text-color);
     min-height: 62px;
-    border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 
     display: flex;
@@ -88,7 +87,6 @@
 
     color: var(--footer-text-color);
     border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color)
 }
 
 .task-counter {

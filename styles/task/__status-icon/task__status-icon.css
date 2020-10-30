@@ -17,7 +17,11 @@
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
-    ..task__checkbox:checked + .task__status-icon {
+    .task__checkbox:checked + .task__status-icon {
     	background: url(../../../icons/completed@2x.png) no-repeat;
     }
+}
+
+.task__checkbox:focus + .task__status-icon {
+	border: 1px dashed;
 }

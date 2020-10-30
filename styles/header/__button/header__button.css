@@ -16,11 +16,7 @@
     	background: url(../../../icons/select-all@2x.png) no-repeat;
     	background-size: 28px 16px;
     	background-color: var(--button-background-color);
-/*    	width: 28px;
-		height: 16px;
-	    border: none;
-	    margin-left: 17px;
-		margin-right: 17px;*/
+        background-position: center;
     }
 }
 

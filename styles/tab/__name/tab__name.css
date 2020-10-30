@@ -7,3 +7,7 @@
 	border: 1px solid var(--selected-tab-border-color);
     border-radius: 5px;
 }
+
+.tab__radio:focus + .tab__name {
+	text-decoration: underline;
+}
