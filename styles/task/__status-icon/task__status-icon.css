@@ -1,7 +1,7 @@
 .task__status-icon {
 	width: 40px;
 	height: 33px;
-	margin-left: 10px;
+	margin-left: -20px;
 	margin-right: 10px;
 	border-radius: 50%;
 	border: 1px solid var(--border-color);

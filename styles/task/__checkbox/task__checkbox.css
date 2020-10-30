@@ -1,6 +1,7 @@
 .task__checkbox {
     margin: 11px 11px;
-    display: none;
+    position: relative;
+    left: -10000px;
 }
 
 .task__checkbox:checked ~ .task__text {
