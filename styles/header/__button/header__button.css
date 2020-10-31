@@ -5,13 +5,13 @@
     background-color: var(--button-background-color);
 	width: 62px;
     height: 100%;
-    border: 1px solid transparent;;
+    border: 1px solid transparent;
 }
 
 
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+(min-resolution: 192dpi) {  
     .header__button {
     	background: url(../../../icons/select-all@2x.png) no-repeat;
     	background-size: 28px 16px;

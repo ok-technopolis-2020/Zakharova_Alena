@@ -1,6 +1,6 @@
 .tab__radio {
-	width: 0;
-	height: 0;
+	position: relative;
+	left: -10000px;
 }
 
 .tab__radio:focus {
