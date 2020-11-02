@@ -1,0 +1,32 @@
+:root {
+	--border-color: #E6E6E6;
+	--header-color: #CCCCCC;
+	--placeholder-color: #CCCCCC;
+	--item-text-color: #666666;
+	--body-background-color: #F2F2F2;
+	--main-container-background-color: #FFFFFF;
+	--selected-tab-border-color: #EBDFDF;
+	--hovered-item-color: #FAFAFA;
+	--button-background-color: #FFFFFF;
+	--footer-text-color: #888888;
+	--checked-item-border-color: #5DC2AF;
+	--checked-item-text-color: #CCCCCC;
+}
+
+.todo-app {
+    background-color: var(--body-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	font-family: Roboto, sans-serif;
+    min-width: 570px;
+}
+
+.app-header__text {
+    font-size: 100px;
+    font-weight: 200;
+    color: var(--header-color);
+    margin-top: 0;
+    margin-bottom: 0;
+}

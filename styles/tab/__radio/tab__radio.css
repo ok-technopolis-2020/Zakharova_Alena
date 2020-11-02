@@ -1,8 +1,0 @@
-.tab__radio {
-	position: relative;
-	left: -10000px;
-}
-
-.tab__radio:focus {
-	border: 1px solid red;
-}
