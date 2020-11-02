@@ -1,0 +1,7 @@
+.app-header__text {
+    font-size: 100px;
+    font-weight: 200;
+    color: var(--header-color);
+    margin-top: 0;
+    margin-bottom: 0;
+}

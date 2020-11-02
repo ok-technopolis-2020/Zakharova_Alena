@@ -1,0 +1,10 @@
+.task__text {
+	flex-grow: 1;
+	word-break: break-word;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.task__checkbox:checked ~ .task__text {
+	text-decoration: line-through;
+}
