@@ -40,15 +40,15 @@
 .tab__name {
     padding: 2px 5px;
     border: 1px solid transparent;
-}
 
-.tab__radio:checked + .tab__name {
+    .tab__radio:checked + & {
     border: 1px solid var(--selected-tab-border-color);
     border-radius: 5px;
-}
+    }
 
-.tab__radio:focus + .tab__name {
+    .tab__radio:focus + & {
     text-decoration: underline;
+	}
 }
 
 .clear-btn {

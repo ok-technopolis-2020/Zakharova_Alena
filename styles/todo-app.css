@@ -1,16 +1,16 @@
 :root {
-	--border-color: #E6E6E6;
-	--header-color: #CCCCCC;
-	--placeholder-color: #CCCCCC;
-	--item-text-color: #666666;
-	--body-background-color: #F2F2F2;
-	--main-container-background-color: #FFFFFF;
-	--selected-tab-border-color: #EBDFDF;
-	--hovered-item-color: #FAFAFA;
-	--button-background-color: #FFFFFF;
-	--footer-text-color: #888888;
-	--checked-item-border-color: #5DC2AF;
-	--checked-item-text-color: #CCCCCC;
+	--border-color: #e6e6e6;
+	--header-color: #ccc;
+	--placeholder-color: #ccc;
+	--item-text-color: #666;
+	--body-background-color: #f2f2f2;
+	--main-container-background-color: #fff;
+	--selected-tab-border-color: #ebdfdf;
+	--hovered-item-color: #fafafa;
+	--button-background-color: #fff;
+	--footer-text-color: #888;
+	--checked-item-border-color: #5dc2af;
+	--checked-item-text-color: #ccc;
 }
 
 .todo-app {
