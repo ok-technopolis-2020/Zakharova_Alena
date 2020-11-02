@@ -1,0 +1,48 @@
+.header {
+    height: 62px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+}
+
+::placeholder {
+    color: var(--placeholder-color);
+}
+
+.header__button {
+    background: url(../icons/select-all.png) no-repeat;
+    background-size: 28px 16px;
+    background-position: center;
+    background-color: var(--button-background-color);
+	width: 62px;
+    height: 100%;
+    border: 1px solid transparent;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .header__button {
+    	background: url(../icons/select-all@2x.png) no-repeat;
+    	background-size: 28px 16px;
+    	background-color: var(--button-background-color);
+        background-position: center;
+    }
+}
+
+.header__button:hover {
+	border: 1px dashed;
+}
+
+.header__input {
+    font-family: Roboto, sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    border: none;
+    width: 100%;
+	height: 60px;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "zakharova_alena",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ok-technopolis-2020/Zakharova_Alena.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ok-technopolis-2020/Zakharova_Alena/issues"
+  },
+  "homepage": "https://github.com/ok-technopolis-2020/Zakharova_Alena#readme",
+  "devDependencies": {
+    "postcss-nested": "^4.2.3",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}
