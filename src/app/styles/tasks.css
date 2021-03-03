@@ -43,22 +43,32 @@
 	border: 1px solid var(--border-color);
 	background-color: var(--main-container-background-color);
 
-	.task__checkbox:checked + & {
-	background: url(../icons/completed.png) no-repeat;
+	/*.task__checkbox:checked + & {*/
+	/*background: url(../../../img/completed.png) no-repeat;*/
+	/*background-position: center;*/
+	/*border: 1px solid var(--checked-item-border-color);*/
+	/*}*/
+
+	/*.task__checkbox:focus + & {*/
+	/*border: 1px dashed;*/
+	/*}*/
+}
+
+.task__checkbox:checked + task__status-icon {
+	background: url(../../img/completed.png) no-repeat;
 	background-position: center;
 	border: 1px solid var(--checked-item-border-color);
-	}
+}
 
-	.task__checkbox:focus + & {
+.task__checkbox:focus + task__status-icon {
 	border: 1px dashed;
-	}
 }
 
 @media
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     .task__checkbox:checked + .task__status-icon {
-    	background: url(../icons/completed@2x.png) no-repeat;
+    	background: url(../../img/completed@2x.png) no-repeat;
     	background-size: 20px 20px;
     	background-position: 50% 50%;
     }
@@ -70,14 +80,19 @@
 	padding-top: 15px;
 	padding-bottom: 15px;
 
-	.task__checkbox:checked ~ & {
+	/*.task__checkbox:checked ~ & {*/
+	/*color: var(--checked-item-text-color);*/
+	/*text-decoration: line-through;*/
+	/*}*/
+}
+
+.task__checkbox:checked ~ .task__text {
 	color: var(--checked-item-text-color);
 	text-decoration: line-through;
-	}
 }
 
 .task__button {
-    background: url(../icons/close.png) no-repeat;
+    background: url(../../img/close.png) no-repeat;
     background-size: 20px 20px;
 	width: 62px;
     height: 62px;
@@ -97,7 +112,7 @@
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     .task__button {
-    	background: url(../icons/close@2x.png) no-repeat;
+    	background: url(../../img/close@2x.png) no-repeat;
     	background-size: 20px 20px;
         background-position: center;
     }

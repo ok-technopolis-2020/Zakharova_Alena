@@ -5,81 +5,39 @@
 
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="src/app/styles/todo-app.css">
-	<link rel="stylesheet" href="src/app/styles/main-container.css">
-	<link rel="stylesheet" href="src/app/styles/header.css">
-	<link rel="stylesheet" href="src/app/styles/tasks.css">
-	<link rel="stylesheet" href="src/app/styles/footer.css">
+<!--	<link rel="stylesheet" href="app/styles/todo-app.css">-->
+<!--	<link rel="stylesheet" href="app/styles/main-container.css">-->
+<!--	<link rel="stylesheet" href="app/styles/header.css">-->
+<!--	<link rel="stylesheet" href="app/styles/tasks.css">-->
+<!--	<link rel="stylesheet" href="app/styles/footer.css">-->
 
 	<title>todo</title>
 </head>
+
+
 <body class="todo-app">
 	<header class="app-header">
 		<h1 class="app-header__text">todos</h1>
 	</header>
 	
 	<div class="main-container">
-		<header class="header">
+		<form class="header js-add-new-todo-form">
 			<button class="header__button" aria-label="select all"></button>
-			<input type="text" class="header__input" aria-label="add new task" placeholder="What needs to be done?" autofocus="true">
-		</header>
+			<input type="text" class="header__input js-add-new-todo-input"
+				   aria-label="add new task"
+				   placeholder="What needs to be done?"
+				   autofocus="true">
+		</form>
 		
 		<main class="tasks">
-			<ul class="list">
-				<li class="item">
-					<div class="task">
-						<input type="checkbox" class="task__checkbox" id="task1">
-						<label class="task__status-icon" for="task1"></label>
-						<span class="task__text">HTML</span>
-						<button class="task__button" aria-label="remove task"></button>
-					</div>
-					<div hidden="hidden" class="editable-task">
-						<input type="text" class="editable-task__text" value="HTML" aria-label="edit task">
-					</div>
-				</li>
-
-				<li class="item">
-					<div class="task">
-						<input type="checkbox" class="task__checkbox" id="task2" checked="checked">
-						<label class="task__status-icon" for="task2"></label>
-						<span class="task__text">CSS</span>
-						<button class="task__button" aria-label="remove task"></button>
-					</div>
-					<div hidden="hidden" class="editable-task">
-						<input type="text" class="editable-task__text" value="CSS" aria-label="edit task">
-					</div>
-				</li>
-
-				<li class="item">
-					<div class="task">
-						<input type="checkbox" class="task__checkbox" id="task3">
-						<label class="task__status-icon" for="task3"></label>
-						<span class="task__text">JS</span>
-						<button class="task__button" aria-label="remove task"></button>
-					</div>
-					<div hidden="hidden" class="editable-task">
-						<input type="text" class="editable-task__text" value="JS" aria-label="edit task">
-					</div>
-				</li>
-
-				<li class="item">
-					<div class="task">
-						<input type="checkbox" class="task__checkbox" id="task4">
-						<label class="task__status-icon" for="task4"></label>
-						<span class="task__text">JS tools</span>
-						<button class="task__button" aria-label="remove task"></button>
-					</div>
-					<div hidden="hidden" class="editable-task">
-						<input type="text" class="editable-task__text" value="JS tools" aria-label="edit task">
-					</div>
-				</li>
+			<ul class="list js-todo-items-list">
 
 			</ul>
 		</main>
 
 		<footer class="footer">
 			<div class="task-counter">
-				<span class="task-couter__text">3 items left</span>
+				<span class="task-couter__text js-todo-items-left-counter">0 items left</span>
 			</div>
 
 			<div class="tabs">
@@ -100,7 +58,7 @@
 			</div>
 
 			<div>
-				<button class="clear-btn">Clear completed</button>
+				<button class="clear-btn js-clear-completed-action">Clear completed</button>
 			</div>
 		</footer>
 	</div>

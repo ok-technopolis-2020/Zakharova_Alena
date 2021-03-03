@@ -41,14 +41,23 @@
     padding: 2px 5px;
     border: 1px solid transparent;
 
-    .tab__radio:checked + & {
+    /*.tab__radio:checked + & {*/
+    /*border: 1px solid var(--selected-tab-border-color);*/
+    /*border-radius: 5px;*/
+    /*}*/
+
+    /*.tab__radio:focus + & {*/
+    /*text-decoration: underline;*/
+	/*}*/
+}
+
+.tab__radio:checked + .tab__name {
     border: 1px solid var(--selected-tab-border-color);
     border-radius: 5px;
-    }
+}
 
-    .tab__radio:focus + & {
+.tab__radio:focus + .tab__name {
     text-decoration: underline;
-	}
 }
 
 .clear-btn {
