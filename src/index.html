@@ -22,7 +22,7 @@
 	
 	<div class="main-container">
 		<form class="header js-add-new-todo-form">
-			<button class="header__button" aria-label="select all"></button>
+			<button class="header__button js-select-all-action" aria-label="select all"></button>
 			<input type="text" class="header__input js-add-new-todo-input"
 				   aria-label="add new task"
 				   placeholder="What needs to be done?"
@@ -37,22 +37,22 @@
 
 		<footer class="footer">
 			<div class="task-counter">
-				<span class="task-couter__text js-todo-items-left-counter">0 items left</span>
+				<span class="task-counter__text js-todo-items-left-counter">0 items left</span>
 			</div>
 
-			<div class="tabs">
+			<div class="tabs js-todo-filters">
 				<div class="tab">
-					<input type="radio" class="tab__radio" name="tab" id="all" checked="checked" aria-label="all tasks">
+					<input type="radio" class="tab__radio js-todo-filter" name="tab" id="all" value="All" checked="checked" aria-label="all tasks">
 					<label for="all" class="tab__name">All</label>
 				</div>
 
 				<div class="tab">
-					<input type="radio" class="tab__radio" name="tab" id="active" aria-label="active tasks">
-					<label for="active" class="tab__name">Active</label>
+					<input type="radio" class="tab__radio js-todo-filter" name="tab" id="active" value="Active" aria-label="active tasks">
+					<label for="active" class="tab__name js-todo-filter">Active</label>
 				</div>
 
 				<div class="tab">
-					<input type="radio" class="tab__radio" name="tab" id="completed" aria-label="completed tasks">
+					<input type="radio" class="tab__radio js-todo-filter" name="tab" id="completed" value="Completed" aria-label="completed tasks">
 					<label for="completed" class="tab__name">Completed</label>
 				</div>
 			</div>
